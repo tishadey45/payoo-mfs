@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>main</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>yesss</h1>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen py-6 mx-auto bg-gray-200 mx-">
+        <header>
+            <nav class="flex items-center justify-around">
+                <img class="w-16" src="./assets/Group.png" alt="">
+                <div>
+                    <h1 class="text-3xl font-bold">$<span id="main-balance">4500</span></h1>
+                    <p class="p-1 border rounded">available balance</p>
+                </div>
+                <button class="btn">logout</button>
+            </nav>
+            <section class="mt-10">
+
+                <h1 class="mb-2 text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <div class="grid grid-cols-3 gap-2 boxs mt-14">
+                    <div class="p-4 text-center border rounded-md cursor-pointer cards">
+                        <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
+                        <h3>add money</h3>
+                    </div>
+                    <div class="p-4 text-center border rounded-md cursor-pointer cards">
+                        <img class="w-8 mx-auto" src="assets/send1.png" alt="">
+                        <h3>cashout</h3>
+                    </div>
+                    <div class="p-4 text-center border rounded-md cursor-pointer cards">
+                        <img class="w-8 mx-auto" src="assets/money1.png" alt="">
+                        <h3>transfer money</h3>
+                    </div>
+                    <div class="p-4 text-center border rounded-md cursor-pointer cards">
+                        <img class="w-8 mx-auto" src="assets/bonus1.png" alt="">
+                        <h3>get bonus</h3>
+                    </div>
+                    <div class="p-4 text-center border rounded-md cursor-default cards">
+                        <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
+                        <h3>pay bill</h3>
+                    </div>
+                    <div class="p-4 text-center border rounded-md cursor-pointer cards">
+                        <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
+                        <h3>transactions</h3>
+                    </div>
+                </div>
+                <section>
+                    <h1>add money</h1>
+                    <div class="">
+                        <div class="flex-col hero-content lg:flex-row-reverse">
+                            <div class="w-full max-w-sm shadow-2xl card shrink-0">
+                                <div class="card-body">
+                                    <legend>select bank</legend>
+                                    <select class="select rounded-xl">
+                                        <option disabled selected>select bank</option>
+                                        <option value="bkash">bkash</option>
+                                        <option value="nagad">nagad</option>
+                                        <option value="dbbl">dbbl</option>
+                                    </select>
+                                    <fieldset class="fieldset">
+                                        <label class="label">Account number</label>
+                                        <input value="01704021158" id="account-number" type="number"
+                                            class="input rounded-xl" placeholder="type your Acount number" required />
+                                        <label class="label">Amount to add</label>
+                                        <input value="500" id="amount to add" type="text" class="input rounded-xl" placeholder="add amount to withdrow" required>
+                                        <label class="label">PIN</label>
+                                        <input value="1234" id="pin" type="text" class="input rounded-xl"
+                                            placeholder="type your PIN" required />
+                                        <div><a class="link link-hover">Forgot password?</a></div>
+                                        <button id="add money"
+                                            class="mt-4 bg-blue-700 border-none btn rounded-xl btn-neutral">Add
+                                            money</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </header>
+    </section>
+    <script src="./script/addMoney.js"></script>
 </body>
+
 </html>
