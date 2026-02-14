@@ -6,12 +6,17 @@ document.getElementById("add-money").addEventListener("click",function(event){
     const convertedPin = parseInt(pin);
     const mainBalance =document.getElementById("main-balance").innerText;
     // console.log(typeof mainBalance);
-    const convertedMainbalance=parseInt(mainBalance)
-    if(convertedPin===1234){
-        const sum = convertedMainbalance + convertedAmount;
+    const convertedMainBalance=parseFloat(mainBalance)
+    if(amount&&pin){
+     if(convertedPin===1234){
+        const sum = convertedMainBalance + convertedAmount;
         document.getElementById("main-balance").innerText=sum;
-}else{
-    console.log("pin tik nai");
-}
-
+    }
+    else{
+    alert("enter valid pin")
+    }
+    }
+     else{
+     alert("enter valid")
+     }
 })
